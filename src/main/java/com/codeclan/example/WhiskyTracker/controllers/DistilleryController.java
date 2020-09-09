@@ -26,7 +26,7 @@ public class DistilleryController {
             return new ResponseEntity<>(distilleryRepository.findByRegion(region), HttpStatus.OK);
         }
         if (age != null) {
-            return new ResponseEntity<>(distilleryRepository.findByWhiskiesAge(12), HttpStatus.OK);
+            return new ResponseEntity<>(distilleryRepository.findByWhiskiesAge(age), HttpStatus.OK);
         }
         return new ResponseEntity<>(distilleryRepository.findAll(), HttpStatus.OK);
     }
